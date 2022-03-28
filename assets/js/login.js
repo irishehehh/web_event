@@ -48,6 +48,7 @@ $('#form_reg').on('submit', function(e) {
       if (res.status !== 0) {
         return layer.msg(res.message)
       }
+      
    layer.msg('注册成功，请登录！')
       // 模拟人的点击行为
       $('#link_login').click()
@@ -61,6 +62,7 @@ $('#form_login').submit(function(e) {
     $.ajax({
       url: '/api/login',
       method: 'POST',
+     
       // 快速获取表单中的数据
       data: $(this).serialize(),
       success: function(res) {
