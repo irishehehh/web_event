@@ -62,6 +62,8 @@ $('#form_login').submit(function(e) {
     $.ajax({
       url: '/api/login',
       method: 'POST',
+    
+      
      
       // 快速获取表单中的数据
       data: $(this).serialize(),
